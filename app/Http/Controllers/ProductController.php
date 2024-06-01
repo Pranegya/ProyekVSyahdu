@@ -4,11 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class PageUtamaController extends Controller
+class ProductController extends Controller
 {
     public function index()
     {
-        return view('PageUtama.index');
+        return view('tambahProduk');
     }
 }
-

@@ -1,0 +1,111 @@
+body {
+    font-family: 'Barlow',sans-serif;
+    background-color: #2E332A;
+    margin: 0;
+    padding: 0;
+    }
+
+    .about {
+        padding: 20px;
+        color: #FFFFFF;
+    }
+
+    .about .judul-about h1 {
+        text-align: center;
+        color: #FFFFFF;
+        font-size: 48px;
+        margin-bottom: 5px;
+        margin-top: 20px;
+    }
+    .about .judul-about hr {
+        width: 35%; 
+        height: 3px;
+        background-color: #EDB855; 
+        border: none; 
+        margin-top: 5px;
+        margin-bottom: 30px;
+    }
+
+    .about-us {
+        display: flex;
+        flex-direction: row; /* Menyusun elemen secara horizontal */
+        align-items: center; /* Posisi vertikal teks di tengah gambar */
+        margin-left: 230px;
+        margin-right: 100px;
+    }
+    
+    .about-us img {
+        width: 496px; /* Ubah ukuran gambar sesuai kebutuhan */
+        margin-right: 10px; 
+    }
+    
+    .about-us p {
+        font-size: 36px;
+        font-weight: bold;
+        padding-left: 30px;
+        margin: 0; /* Hilangkan margin default yang menyebabkan jarak bawah */
+    }
+    
+    .why-choose-us {
+        font-size: 40px;
+        font-weight: bold;
+        margin-left: 230px;
+        list-style: none;
+    }
+
+    .why-choose-us ol{
+        padding-left: 250px;
+    }
+
+    .pesan {
+        position: relative;
+        color: #FFFFFF;
+    }
+
+    .pesan img {
+        width: 100%;
+        height: 1000px;
+        display: block;
+    }
+
+    .pesan .judul-pesan h1 {
+        position: absolute; /* Mengatur posisi absolut */
+        top: 50px; /* Posisikan di tengah vertikal */
+        left: 50%; /* Posisikan di tengah horizontal */
+        transform: translate(-50%); /* Pusatkan ke tengah */
+        text-align: center;
+        font-size: 48px;
+        margin: 0; /* Hapus margin bawaan */
+    }
+    
+    .pesan .judul-pesan hr {
+        position: absolute; /* Mengatur posisi absolut */
+        top: 100px; /* Posisikan di bawah h1 */
+        left: 50%; /* Posisikan di tengah horizontal */
+        transform: translateX(-50%); /* Pusatkan ke tengah horizontal */
+        width: 25%;
+        height: 3px;
+        background-color: #EDB855;
+        border: none;
+        margin: 0; /* Hapus margin bawaan */
+    }
+    .pesan .ket-pesan{
+        position: absolute; /* Mengatur posisi absolut */
+        top: 50%; /* Posisikan di tengah vertikal */
+        left: 230px; /* Posisikan di tengah horizontal */
+        margin: 0; /* Hapus margin bawaan */
+
+    }
+
+    .pesan .ket-pesan h2{
+        font-size: 64px;
+        top: 50%;
+    }
+
+    .pesan .ket-pesan .sewa{
+        font-size: 24px;
+    }
+    
+
+
+
