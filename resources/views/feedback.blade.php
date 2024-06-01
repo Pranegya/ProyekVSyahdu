@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feedback Form</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         .navbar {
             background-color: #2e4516;
         }
+
         .navbar-nav .nav-link {
             color: #66ee3c !important;
         }
+
         .feedback-container {
             max-width: 400px;
             margin: 20px auto;
@@ -21,51 +25,57 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+
         .star-rating .fa-star {
             font-size: 24px;
             color: #ffc107;
         }
+
         .star-rating .fa-star-o {
             font-size: 24px;
             color: #ccc;
         }
+
         body {
             background-color: #333;
             color: #000000;
         }
-        .text-center{
+
+        .text-center {
             color: #ffffff;
             padding: 20px;
         }
     </style>
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark">
-        <a class="navbar-brand" ></a>
+        <a class="navbar-brand"></a>
         <div class="absolute"><img src="{{asset('images/logo3.png')}}" width="100"></div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="booking.html">Booking</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="product.html">Product</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="review.html">Review</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
-            </li>
-          </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url('homepage#about1')}}">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url('homepage#booking1')}}">Booking</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url('product')}}">Product</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url('homepage#review1')}}">Review</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url('homepage#contact1')}}">Contact</a>
+                </li>
+            </ul>
         </div>
-      </nav>
+    </nav>
     <div class="container">
         <h3 class="text-center">Buat Feedback pada kolom di bawah ini</h3>
         <div class="feedback-container">
@@ -98,4 +108,5 @@
         </div>
     </div>
 </body>
+
 </html>
