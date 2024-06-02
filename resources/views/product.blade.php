@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Page</title>
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
@@ -16,11 +15,35 @@
 
         .navbar {
             background-color: #fff;
+            padding: 0 20px;
         }
 
-        .navbar-brand,
-        .nav-link {
-            color: #549d1c !important;
+        .navbar ul {
+            width: 100%;
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .homepage .navbar li {
+            margin-left: 20px;
+        }
+
+        .navbar a {
+            display: block;
+            padding: 15px 20px;
+            text-decoration: none;
+            color: #8BBD62 !important;
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background-color: #fff;
+            color: #66ee3c !important;
         }
 
         .product-card {

@@ -16,7 +16,36 @@
         }
 
         .navbar {
-            background-color: #f8f9fa;
+            background-color: #fff;
+            padding: 0 20px;
+        }
+
+        .navbar ul {
+            width: 100%;
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .homepage .navbar li {
+            margin-left: 20px;
+        }
+
+        .navbar a {
+            display: block;
+            padding: 15px 20px;
+            text-decoration: none;
+            color: #8BBD62 !important;
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background-color: #fff;
+            color: #66ee3c !important;
         }
 
         .content-wrapper {

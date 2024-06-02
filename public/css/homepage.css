@@ -1,5 +1,5 @@
 body {
-  font-family: 'Barlow',sans-serif;
+  font-family: 'Barlow', sans-serif;
   background-color: #2E332A;
   margin: 0;
   padding: 0;
@@ -70,162 +70,171 @@ body {
 }
 
 .about .container {
-background-color: #2E332A;
-color: #fff;
-padding: 30px;
-border-radius: 0px;
-}
-.about .highlight{
-font-size: 48px
+  background-color: #2E332A;
+  color: #fff;
+  padding: 30px;
+  border-radius: 0px;
 }
 
 .about .highlight {
-border-bottom: 2px solid #d4af37;
-display: inline-block;
-margin-bottom: 20px;
+  font-size: 48px
+}
+
+.about .highlight {
+  border-bottom: 2px solid #d4af37;
+  display: inline-block;
+  margin-bottom: 20px;
 }
 
 .about .placeholder {
-background-color: #444;
-height: 150px;
-margin-bottom: 20px;
+  background-color: #444;
+  height: 150px;
+  margin-bottom: 20px;
 }
 
 .booking .hero-section {
-background-image: url("{{ asset('images/bg-feedback.png') }}");
-background-size: cover;
-background-position: center;
-height: 100vh;
-display: flex;
-align-items: center;
-justify-content: center;
-position: relative;
+  background-image: url("{{ asset('images/bg-feedback.png') }}");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
 .booking .booking-form {
-background: rgba(0, 0, 0, 0.7);
-padding: 20px;
-border-radius: 10px;
-color: white;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
 }
 
 .booking .booking-form input,
 .booking-form select {
-margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .booking .content {
-color: white;
-text-align: left;
-margin-bottom: 30px;
-font-size: 30px;
+  color: white;
+  text-align: left;
+  margin-bottom: 30px;
+  font-size: 30px;
 }
 
 .booking .content h1 {
-margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .booking .icons {
-font-size: 24px;
+  font-size: 24px;
 }
 
 .booking .icons i {
-margin: 0 10px;
+  margin: 0 10px;
 }
 
 .booking .highlight {
-border-bottom: 2px solid #d4af37;
-display: inline-block;
-margin-bottom: 20px;
+  border-bottom: 2px solid #d4af37;
+  display: inline-block;
+  margin-bottom: 20px;
 }
 
-.review  {
-background-color: #fdf2d7;
+.review {
+  background-color: #fdf2d7;
 }
+
 .review .review-section {
-    padding: 50px 0;
-    text-align: center;
+  padding: 50px 0;
+  text-align: center;
 }
+
 .review .review-section h2 {
-    font-weight: bold;
-    margin-bottom: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
-.review  .review-card {
-    background: white;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 10px;
+
+.review .review-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 10px;
 }
-.review  .review-card p {
-    font-size: 14px;
+
+.review .review-card p {
+  font-size: 14px;
 }
+
 .review .stars {
-    color: gold;
+  color: gold;
 }
-.review  .customer-name {
-    margin-top: 10px;
-    font-weight: bold;
-    color: #333;
+
+.review .customer-name {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #333;
 }
-.review  .checked {
-    color: orange;
+
+.review .checked {
+  color: orange;
 }
 
 .contact {
-margin: 0;
-padding: 0;
-font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
 }
 
 .contact .outer-frame {
-height: 345px;
-background-color: #2E332A;
-display: flex;
-justify-content: center;
-align-items: center;
+  height: 345px;
+  background-color: #2E332A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .contact .frame {
-width: 403px;
-height: 145px;
-margin: 30px;
-display: flex;
+  width: 403px;
+  height: 145px;
+  margin: 30px;
+  display: flex;
 }
 
 .contact .icon {
-width: 137px;
-height: 145px;
-display: flex;
-justify-content: center;
-align-items: center;
-background-color: #9AD26B;
-background-size: cover;
-background-position: center;
+  width: 137px;
+  height: 145px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #9AD26B;
+  background-size: cover;
+  background-position: center;
 }
 
 .contact .icon img {
-max-width: 75%;
-max-height: 75%;
+  max-width: 75%;
+  max-height: 75%;
 }
 
 .contact .word {
-flex: 1;
-display: flex;
-justify-content: center;
-align-items: center;
-color: white;
-font-weight: bold;
-font-size: 40px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-size: 40px;
 }
 
 .contact .whatsapp {
-background-color: orange;
+  background-color: orange;
 }
 
 .contact .tiktok {
-background-color: orange;
+  background-color: orange;
 }
+
 .contact .instagram {
-background-color: orange;
+  background-color: orange;
 }
