@@ -9,11 +9,41 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-        .navbar {
-            background-color: #2e4516;
+        body {
+            background-color: #2a2a2a;
+            color: #4baf26;
         }
 
-        .navbar-nav .nav-link {
+        .navbar {
+            background-color: #fff;
+            padding: 0 20px;
+        }
+
+        .navbar ul {
+            width: 100%;
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .homepage .navbar li {
+            margin-left: 20px;
+        }
+
+        .navbar a {
+            display: block;
+            padding: 15px 20px;
+            text-decoration: none;
+            color: #8BBD62 !important;
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background-color: #fff;
             color: #66ee3c !important;
         }
 
@@ -49,9 +79,14 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand"></a>
-        <div class="absolute"><img src="{{asset('images/logo3.png')}}" width="100"></div>
+        <div>
+            <a href="{{url('homepage')}}">
+                <img src="{{asset('images/logo.jpg')}}" width="100" alt="">
+        </div>
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -76,6 +111,8 @@
             </ul>
         </div>
     </nav>
+
+
     <div class="container">
         <h3 class="text-center">Buat Feedback pada kolom di bawah ini</h3>
         <div class="feedback-container">

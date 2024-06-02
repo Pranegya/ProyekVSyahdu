@@ -7,7 +7,6 @@
   <title>Piknik Syahdu Malang</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link rel="stylesheet" href="{{ asset('css/homepage.css') }}">
   <style>
     body {
       font-family: 'Barlow', sans-serif;
@@ -18,9 +17,34 @@
 
     .homepage .navbar {
       background-color: #2e4516;
+      padding: 0 20px;
     }
 
-    .homepage .navbar-nav .nav-link {
+    .homepage .navbar ul {
+      width: 100%;
+      list-style: none;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    .homepage .navbar li {
+      margin-left: 20px;
+    }
+
+    .homepage .navbar a {
+      display: block;
+      padding: 15px 20px;
+      text-decoration: none;
+      color: #A1DD70 !important;
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    .homepage .navbar a:hover {
+      background-color: #2a2a2a;
       color: #66ee3c !important;
     }
 
@@ -29,8 +53,9 @@
       background-size: cover;
       background-position: center;
       position: relative;
-      height: 1000px;
+      height: 100vh;
       color: #fff;
+      display: flex;
     }
 
     .homepage .hero-text {
@@ -65,19 +90,37 @@
       color: #fff;
     }
 
-    .homepage .div.absolute {
-      position: absolute;
-      top: 80px;
+    .homepage .feedback-button {
+      background-color: black;
+      height: 150px;
+      width: 30x;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
       right: 0;
-      width: 200px;
-      height: 100px;
-      border: 3px solid #ffffff;
-      z-index: 100;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
     }
 
-    .homepage .btn-secondary {
-      margin-right: -1550px;
-      float: right;
+    .homepage .feedback-button a {
+      color: white;
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      transform: rotate(90deg);
+      font-size: 14px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    .homepage .feedback-button img {
+      height: 30px;
+      width: 30px;
     }
 
     .about .container {
@@ -284,18 +327,15 @@
     </nav>
     <!-- Home Section -->
     <section class="hero-section d-flex align-items-center justify-content-center">
-      <div>
-        <button class="btn" type="submit">
-          <a href="{{url('feedback')}}">
-            <img src="{{ asset('images/button feedback.png')}}" width="70" alt="buttonpng" />
-          </a>
-        </button>
-      </div>
       <div class="hero-text text-center">
         <h1>Piknik Lebih Seru Dengan Perlengkapan Terbaik Dari PIKNIK SYAHDU Malang.</h1>
       </div>
       <div class="col-12 mb-4 display: flex;">
-        <a href="product.html" class="cta-button">Lihat Produk</a>
+        <a href="{{url('product')}}" class="cta-button">Lihat Produk</a>
+      </div>
+      <div class="feedback-button">
+        <a href="{{url('feedback')}}">Feedback</a>
+        <img src="images/Feedback.png" alt="Feedback icon">
       </div>
     </section>
   </div>
