@@ -41,6 +41,7 @@ Route::get('/tambahProduk', function () {
 
 Route::get('/daftarPesanan', function () {
     return view('orders/daftarPesanan');
+
 });
 
 Route::get('/daftarReview', function () {
