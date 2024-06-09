@@ -118,15 +118,15 @@
         <div class="feedback-container">
             <form>
                 <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                    <label for="name">Nama</label>
+                    <input type="text" class="form-control" id="name" placeholder="Masukkan nama">
                 </div>
                 <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Masukkan email">
                 </div>
                 <div class="form-group">
-                    <label for="rating">Share your experience in scaling</label>
+                    <label for="rating">Pilih rating</label>
                     <div class="star-rating">
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
@@ -136,7 +136,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="comments">Add your comments</label>
+                    <label for="comments">Isikan komen</label>
                     <textarea class="form-control" id="comments" rows="3"></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
@@ -145,5 +145,4 @@
         </div>
     </div>
 </body>
-
 </html>

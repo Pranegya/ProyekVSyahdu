@@ -81,9 +81,10 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{url('daftarPesanan')}}">Daftar Pesanan</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{url('login')}}">LogOut</a>
-                </li>
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <button type="submit" class="btn btn-danger">Logout</button>
+                </form>
             </ul>
         </div>
     </nav>

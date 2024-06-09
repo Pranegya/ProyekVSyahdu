@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daftar Pesanan</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <style>
         body {
@@ -66,7 +64,6 @@
         }
     </style>
 </head>
-
 <body>
     <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="#">
@@ -75,7 +72,7 @@
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{url('daftarReview')}}">Daftar Review</a>
+                    <a class="nav-link" href="{{url('daftarReview')}}">Review</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{url('tambahProduk')}}">Product</a>
@@ -90,6 +87,11 @@
     <div class="container">
         <div class="content-wrapper">
             <h2 class="text-center">Daftar Pesanan</h2>
+            @if(session('success'))
+                <div class="alert alert-success">
+                    {{ session('success') }}
+                </div>
+            @endif
             <table class="table table-bordered">
                 <thead>
                     <tr>
@@ -101,58 +103,25 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Lili Daniels</td>
-                        <td>lili@gmail.com</td>
-                        <td>0812345678910</td>
-                        <td>
-                            <input type="date" class="form-control" value="2025-06-01">
-                        </td>
-                        <td>
-                            <button class="btn btn-primary btn-sm"><i class="fa fa-pencil"></i></button>
-                            <button class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Henrietta Whitney</td>
-                        <td>whitney@gmail.com</td>
-                        <td>0812333333333</td>
-                        <td>
-                            <input type="date" class="form-control" value="2025-08-04">
-                        </td>
-                        <td>
-                            <button class="btn btn-primary btn-sm"><i class="fa fa-pencil"></i></button>
-                            <button class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Seth McDaniel</td>
-                        <td>mcdaniel@gmail.com</td>
-                        <td>0812344444444</td>
-                        <td>
-                            <input type="date" class="form-control" value="2024-05-24">
-                        </td>
-                        <td>
-                            <button class="btn btn-primary btn-sm"><i class="fa fa-pencil"></i></button>
-                            <button class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Edward King</td>
-                        <td>king@gmail.com</td>
-                        <td>0812345555555</td>
-                        <td>
-                            <input type="date" class="form-control" value="2024-02-15">
-                        </td>
-                        <td>
-                            <button class="btn btn-primary btn-sm"><i class="fa fa-pencil"></i></button>
-                            <button class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
-                        </td>
-                    </tr>
+                    @foreach($orders as $order)
+                        <tr>
+                            <td>{{ $order->nama_pelanggan }}</td>
+                            <td>{{ $order->email }}</td>
+                            <td>{{ $order->no_telp }}</td>
+                            <td>{{ $order->start_date }}</td>
+                            <td>
+                                <a href="{{ route('orders.edit', $order->id) }}" class="btn btn-primary btn-sm"><i class="fa fa-pencil"></i></a>
+                                <form action="{{ route('orders.destroy', $order->id) }}" method="POST" style="display:inline;">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
+                                </form>
+                            </td>
+                        </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>
     </div>
 </body>
-
 </html>
